@@ -1,0 +1,72 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+
+<div class="jumbotron">
+    <div id="search-area">
+        <h2>Artist Search</h2>
+
+        <div>
+            <label for="search-text">Artist Name:</label>
+            <input id="search-text" type="text" />
+        </div>
+        <button id="search-button" type="button" onclick="initSearch()">Search</button>
+    </div>
+</div>
+
+<div id="result-area">
+
+</div>
+
+<template id="artist-template">
+    <div>
+        <label id="artist-name"></label>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Album Title</th>
+                    <th>Release Date</th>
+                </tr>
+            </thead>
+            <tbody id="album-list">
+            </tbody>
+        </table>
+    </div>
+</template>
+
+
+<template id="album-template">
+    <tr class="closed">
+        <td id="album-title"></td>
+        <td id="album-release"></td>
+    </tr>
+    <tr>
+        <td id="album-track-cont" colspan="2">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Track Position</th>
+                        <th>Track Title</th>
+                        <th>Track Duration</th>
+                    </tr>
+                </thead>
+                <tbody id="track-list">
+                </tbody>
+            </table>
+        </td>
+    </tr>
+</template>
+
+<template id="track-template">
+    <tr>
+        <td id="track-postion"></td>
+        <td id="track-title"></td>
+        <td id="track-length"></td>
+    </tr>
+</template>
+
+
+<script src="~/Scripts/GetArtist.js"></script>
